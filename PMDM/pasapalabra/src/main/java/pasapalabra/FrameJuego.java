@@ -7,7 +7,7 @@ public class FrameJuego extends JFrame {
 
     public FrameJuego(){
 
-        this.setTitle("Ahorcado");
+        this.setTitle("PASAPALABRA");
         this.setLocationRelativeTo(null);
         this.setSize(1280,720);
 

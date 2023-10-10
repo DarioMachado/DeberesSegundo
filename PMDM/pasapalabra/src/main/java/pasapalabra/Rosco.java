@@ -33,6 +33,8 @@ public class Rosco extends JPanel {
 
 
             bolas[i] = new Bola(letras[i], x, y);
+
+
             angulo+=incremento;
         }
 
@@ -46,7 +48,7 @@ public class Rosco extends JPanel {
         Graphics2D g2d = (Graphics2D) g;
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
-        g2d.setPaint(Color.red);
+
 
         g2d.setFont(new Font("SansSerif", Font.BOLD, 18));
 
@@ -54,7 +56,7 @@ public class Rosco extends JPanel {
             Bola bola = bolas[i];
             //g2d.rotate(Math.toRadians(360/25d));
 
-            g2d.setPaint(bola.getColor());
+            g2d.setPaint(Color.decode(bola.estado.hexValue));
             g2d.fill(new Ellipse2D.Double((double) bola.getX(), (double) bola.getY(), bola.getDiametro(), bola.getDiametro()));
 
 
@@ -75,14 +77,14 @@ public class Rosco extends JPanel {
         private int x,y;
         private double diametro;
 
-        private Color color;
+        public Estado estado;
 
         public Bola(String letra, int x, int y) {
             this.letra=letra;
             this.x = x;
             this.y = y;
             this.diametro = 40;
-            this.color=Color.blue;
+            this.estado=Estado.AZUL;
         }
 
         public int getX(){
@@ -98,15 +100,25 @@ public class Rosco extends JPanel {
         public String getLetra(){
             return letra;
         }
-        public void setColor(Color c){
-            this.color=c;
-        }
-        public Color getColor(){
-            return color;
-        }
+
 
 
     }
+
+    public enum Estado{
+        AZUL("#084CF6"), VERDE("#0DCA48"), ROJO("#EA005B");
+
+        private final String hexValue;
+
+        Estado(String hexValue) {
+            this.hexValue = hexValue;
+        }
+
+        public String getHexValue() {
+            return hexValue;
+        }
+    }
+
 }
 
 
