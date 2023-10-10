@@ -9,7 +9,7 @@ public class MenuPrincipal extends JPanel {
     public MenuPrincipal(){
         this.setBackground(Color.BLACK);
 
-
+        this.add(new Rosco());
 
 
 
