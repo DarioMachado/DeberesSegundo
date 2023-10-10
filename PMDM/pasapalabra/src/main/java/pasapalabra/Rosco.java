@@ -4,6 +4,7 @@ package pasapalabra;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Ellipse2D;
+import java.awt.Shape;
 
 public class Rosco extends JPanel {
 
@@ -17,11 +18,26 @@ public class Rosco extends JPanel {
 
     public Rosco(){
         this.setSize(1280,720);
+        this.setLayout(null);
         this.setOpaque(false);
 
         for (int i = 0; i < letras.length; i++) {
-            bolas[i] = new Bola(letras[i]);
-            this.add(bolas[i]);
+            bolas[i] = new Bola(letras[i], 30*i, 200);
+        }
+
+
+
+        this.setVisible(true);
+    }
+
+    protected void paintComponent(Graphics g){
+        super.paintComponent(g);
+        Graphics2D g2d = (Graphics2D) g;
+
+        g2d.setPaint(Color.red);
+
+        for(int i = 0; i < bolas.length; i++){
+            g2d.fill(new Ellipse2D.Double((double) bolas[i].getX(), (double) bolas[i].getY(),bolas[i].getDiametro(),bolas[i].getDiametro()));
         }
 
 
@@ -30,29 +46,34 @@ public class Rosco extends JPanel {
 
 
 
-    private class Bola extends JComponent {
+    private class Bola {
 
         private char letra;
-        private int x,y,diametro;
-        public Bola(char letra) {
+        private int x,y;
+        private double diametro;
+        public Bola(char letra, int x, int y) {
             this.letra=letra;
-            this.x = 200;
-            this.y = 200;
+            this.x = x;
+            this.y = y;
             this.diametro = 40;
-            this.setVisible(true);
-
 
         }
 
-        @Override
-        protected void paintComponent(Graphics g) {
-            super.paintComponent(g);
-            Graphics2D g2d = (Graphics2D) g;
-            Ellipse2D ball = new Ellipse2D.Double(x, y, diametro, diametro);
-            g2d.setColor(Color.RED);
-            g2d.fill(ball);
-            System.out.println("hey");
+        public int getX(){
+            return x;
         }
+        public int getY(){
+            return y;
+        }
+        public double getDiametro(){
+            return diametro;
+        }
+
+        public char getLetra(){
+            return letra;
+        }
+
+
     }
 }
 
