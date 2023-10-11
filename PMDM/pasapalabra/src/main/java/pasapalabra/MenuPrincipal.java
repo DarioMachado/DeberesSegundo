@@ -12,16 +12,35 @@ public class MenuPrincipal extends JPanel {
 
 
     private BufferedImage logo;
+
+    private BufferedImage foto;
+    private BufferedImage fotos[];
+
     public MenuPrincipal(){
 
         this.setSize(1280,720);
         this.setLayout(null);
-       this.add(new Rosco());
+      // this.add(new Rosco()); //test
         try {
             logo = ImageIO.read(new File("src/main/resources/pasapalabralogo.png"));
+            foto = ImageIO.read(new File("src/main/resources/avatares/jotchua.jpg"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
+        File avatares[] = new File("src/main/resources/avatares").listFiles();
+
+        fotos = new BufferedImage[avatares.length];
+        for (int i = 0; i < avatares.length; i++) {
+
+            try {
+                fotos[i] = ImageIO.read(avatares[i]);
+            } catch (IOException e) {
+
+                e.printStackTrace();
+            }
+        }
+
 
 
     }
@@ -34,6 +53,7 @@ public class MenuPrincipal extends JPanel {
         Graphics2D g2d = (Graphics2D) g;
         //Explicación de esto de abajo: no encontraba un fondo bueno para el pasapalabra, así que decidí pintar varios gradientes azules a diferentes opacidades
         //para crearme mi propio fondo
+        g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         g2d.setPaint(Color.black);
         g2d.fillRect(0,0,getWidth(),getHeight());
 
@@ -56,12 +76,30 @@ public class MenuPrincipal extends JPanel {
         g2d.setPaint(gradiente3);
         g2d.fillRect(0,0,getWidth(),getHeight());
 
-        g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+
         g2d.drawImage(logo, getWidth()-logo.getWidth()-100, 50, null);
+        g2d.drawImage(foto, getWidth()-logo.getWidth()-200, 200, null);
+
+
 
     }
 
+    private class FrameAvatar extends JDialog{
 
+        private JLabel fotos[];
+
+
+        private FrameAvatar(BufferedImage arr[]){
+
+
+
+        }
+
+
+
+
+
+    }
 
 
 

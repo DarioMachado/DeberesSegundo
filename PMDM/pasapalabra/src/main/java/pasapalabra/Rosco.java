@@ -9,7 +9,7 @@ import java.awt.Shape;
 public class Rosco extends JPanel {
 
 
-    //EN PASAPALABRA NO HAY K NI Ñ LE HE PREGUNTADO A MI ABUELA
+    //EN PASAPALABRA NO HAY K NI W LE HE PREGUNTADO A MI ABUELA
     private String letras[] = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
             "L", "M", "N", "Ñ", "O", "P", "Q", "R", "S", "T",
             "U", "V", "X", "Y", "Z"};
