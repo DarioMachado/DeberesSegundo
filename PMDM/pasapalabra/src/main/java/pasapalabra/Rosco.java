@@ -3,6 +3,8 @@ package pasapalabra;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.geom.Ellipse2D;
 import java.awt.Shape;
 
@@ -43,7 +45,12 @@ public class Rosco extends JPanel {
 
         this.setVisible(true);
     }
-
+    public String[] getLetras(){
+        return letras;
+    }
+    public Bola getBola(int indice){
+        return bolas[indice];
+    }
     protected void paintComponent(Graphics g){
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g;
@@ -72,7 +79,7 @@ public class Rosco extends JPanel {
 
 
 
-    private class Bola {
+    public class Bola {
 
         private String letra;
         private int x,y;
@@ -107,7 +114,7 @@ public class Rosco extends JPanel {
     }
 
     public enum Estado{
-        AZUL("#084CF6"), VERDE("#0DCA48"), ROJO("#EA005B");
+        AZUL("#084CF6"), VERDE("#0DCA48"), ROJO("#EA005B"), ACTIVO("#94C5F7");
 
         private final String hexValue;
 

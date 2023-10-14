@@ -46,6 +46,7 @@ public class FrameJuego extends JFrame {
         juego = new PanelJuego(icono);
         mp = null;
         this.add(juego);
+        juego.requestFocusInWindow();
         repaint();
     }
 

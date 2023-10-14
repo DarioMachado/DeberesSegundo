@@ -35,7 +35,7 @@ public class Pregunta {
                 NodeList cuestionList = aElement.getElementsByTagName("cuestion");
 
                 if (cuestionList.getLength() > 0) {
-                    //El random es para que cueste más aprenderte las preguntas de memoria, ya que esto solo se activa al construirlo no debería de haber ningún problema
+                    //El random es para que cueste más aprenderte las preguntas de memoria. Ya que esto solo se activa al construirlo no debería de haber ningún problema
                     Random rng = new Random();
 
 
@@ -43,8 +43,8 @@ public class Pregunta {
                     Element preguntaElement = (Element) randomCuestion.getElementsByTagName("pregunta").item(0);
                     Element respuestaElement = (Element) randomCuestion.getElementsByTagName("respuesta").item(0);
 
-                    pregunta = preguntaElement.getTextContent();
-                    respuesta = respuestaElement.getTextContent();
+                    pregunta = preguntaElement.getTextContent().trim();
+                    respuesta = respuestaElement.getTextContent().trim();
 
 
                 }
