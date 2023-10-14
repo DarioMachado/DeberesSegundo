@@ -2,20 +2,25 @@ package pasapalabra;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.border.Border;
+import javax.swing.border.LineBorder;
 import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class MenuPrincipal extends JPanel {
+public class MenuPrincipal extends JPanel implements MouseListener{
 
 
     private BufferedImage logo;
 
     private BufferedImage foto;
     private BufferedImage fotos[];
-
+    private JLabel fotoclick;
+    private JButton salir;
     public MenuPrincipal(){
 
         this.setSize(1280,720);
@@ -40,6 +45,13 @@ public class MenuPrincipal extends JPanel {
                 e.printStackTrace();
             }
         }
+        fotoclick = new JLabel();
+        fotoclick.setIcon(new ImageIcon(foto));
+        fotoclick.setBounds(600,400,100,100);
+        fotoclick.addMouseListener(this);
+        this.add(fotoclick);
+
+
 
 
 
@@ -78,27 +90,145 @@ public class MenuPrincipal extends JPanel {
 
 
         g2d.drawImage(logo, getWidth()-logo.getWidth()-100, 50, null);
-        g2d.drawImage(foto, getWidth()-logo.getWidth()-200, 200, null);
+        //g2d.drawImage(foto, getWidth()-logo.getWidth()-200, 200, null);
 
 
 
     }
 
-    private class FrameAvatar extends JDialog{
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        if(e.getSource()==fotoclick){
+            new FrameAvatar(fotos);
+        }
+    }
 
-        private JLabel fotos[];
+    @Override
+    public void mousePressed(MouseEvent e) {
 
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+
+    }
+
+    private void cambiarAvatar(JLabel seleccion){
+        fotoclick.setIcon(seleccion.getIcon());
+        repaint();
+    }
+
+    private JButton crearBoton(int x, int y, String s){
+        JButton jb = new JButton(s);
+        jb.setBounds(x,y,100,50);
+
+        return jb;
+    };
+
+
+    private class FrameAvatar extends JDialog implements MouseListener{
+
+        private JLabel etiquetas[];
+        private JButton confirmacion;
+        private JLabel seleccion;
 
         private FrameAvatar(BufferedImage arr[]){
+            this.setSize(500,300);
+            //this.setUndecorated(true);
+            this.getContentPane().setBackground(Color.black);
+            this.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+            this.setModal(true);
+            this.setLayout(null);
+            Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+            this.setLocation((screenSize.width - this.getWidth()) / 2, (screenSize.height - this.getHeight()) / 2);
+            JPanel imagenes = new JPanel();
+            imagenes.setLayout(new FlowLayout(FlowLayout.CENTER));
+            imagenes.setBackground(Color.black);
+            //
+            etiquetas = new JLabel[arr.length];
+            for(int i = 0; i < etiquetas.length;i++){
+                etiquetas[i] = new JLabel();
+                etiquetas[i].setIcon(new ImageIcon(arr[i]));
+                etiquetas[i].setSize(100,100);
+                etiquetas[i].addMouseListener(this);
+                imagenes.add(etiquetas[i]);
+            }
+
+            imagenes.setBounds(0,0,500,200);
+            this.add(imagenes);
+            //Esto es para que en caso de que se seleccione una imagen y luego se cierre la ventana usando la X, no guarde la última imagen seleccionada (bueno,
+            //más bien que la borre cuando la vuelvas a abrir, porque técnicamente sí la guarda)
+            seleccion = null;
+
+            confirmacion = new JButton("CONFIRMAR");
+            confirmacion.setFocusable(false);
+            confirmacion.setBorder(null);
+            confirmacion.setBounds(200,200,100,50);
+            confirmacion.addMouseListener(this);
+            confirmacion.setBorder(new LineBorder(Color.white, 3));
+            confirmacion.setBackground(Color.decode("#084CF6"));
+            confirmacion.setForeground(Color.white);
+            this.add(confirmacion);
+
+
+            this.setVisible(true);
 
 
 
         }
 
 
+        @Override
+        public void mouseClicked(MouseEvent e) {
 
+           for(int i = 0; i < etiquetas.length;i++){
+                if(e.getSource()==etiquetas[i]){
+                    Border border = new LineBorder(Color.white, 3);
+                    etiquetas[i].setBorder(border);
+                    seleccion = etiquetas[i];
+                }
+                else
+                    etiquetas[i].setBorder(null);
+            }
 
+           if(e.getSource()==confirmacion&&seleccion!=null){
+                cambiarAvatar(seleccion);
+               this.setVisible(false);
+               this.dispose();
 
+           }
+
+        }
+
+        @Override
+        public void mousePressed(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseReleased(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseEntered(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseExited(MouseEvent e) {
+
+        }
     }
 
 
