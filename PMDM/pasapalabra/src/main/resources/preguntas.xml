@@ -1,4 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root>
-    <element1>This is a text with characters like á, é, í, ó, ú.</element1>
-</root>
+<pasapalabra>
+    <A>
+       <cuestion>
+           <pregunta>
+               Vehículo destinado al transporte de heridos y enfermos, y de elementos de cura y auxilio
+           </pregunta>
+           <respuesta>
+               AMBULANCIA
+           </respuesta>
+       </cuestion>
+        <cuestion>
+            <pregunta>
+                Aro de metal u otra materia, liso o con labores, y con perlas o piedras preciosas o sin ellas, que se lleva, principalmente por adorno, en los dedos de la mano            </pregunta>
+            <respuesta>
+                ANILLO
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+            Pasado de moda o propio de otra época
+            </pregunta>
+            <respuesta>
+                ANTICUADO
+            </respuesta>
+        </cuestion>
+    </A>
+    <B>
+        <cuestion>
+            <pregunta>
+                Lugar donde se tiene considerable número de libros ordenados para la lectura
+            </pregunta>
+            <respuesta>
+                BIBLIOTECA
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Ciencia que trata de los seres vivos considerando su estructura, funcionamiento, evolución, distribución y relaciones.
+            </pregunta>
+            <respuesta>
+                BIOLOGIA
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Que cede fácilmente a la presión del tacto.
+            </pregunta>
+            <respuesta>
+                BLANDO
+            </respuesta>
+        </cuestion>
+
+    </B>
+    <C>
+        <cuestion>
+            <pregunta>
+                Que cede fácilmente a la presión del tacto.
+            </pregunta>
+            <respuesta>
+                BLANDO
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Que cede fácilmente a la presión del tacto.
+            </pregunta>
+            <respuesta>
+                BLANDO
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Que cede fácilmente a la presión del tacto.
+            </pregunta>
+            <respuesta>
+                BLANDO
+            </respuesta>
+        </cuestion>
+
+    </C>
+</pasapalabra>

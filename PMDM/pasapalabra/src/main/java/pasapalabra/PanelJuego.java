@@ -14,7 +14,7 @@ public class PanelJuego extends JPanel {
         this.setSize(1280,720);
         this.setLayout(null);
         this.add(rosco);
-
+        new Pregunta("A");
 
     }
 

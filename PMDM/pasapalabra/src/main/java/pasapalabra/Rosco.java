@@ -10,6 +10,7 @@ public class Rosco extends JPanel {
 
 
     //EN PASAPALABRA NO HAY K NI W LE HE PREGUNTADO A MI ABUELA
+    //Hay que usar String en lugar de char, debido a que Ñ no puede ser char.
     private String letras[] = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
             "L", "M", "N", "Ñ", "O", "P", "Q", "R", "S", "T",
             "U", "V", "X", "Y", "Z"};
