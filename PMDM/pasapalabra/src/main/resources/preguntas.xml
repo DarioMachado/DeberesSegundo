@@ -55,28 +55,556 @@
     <C>
         <cuestion>
             <pregunta>
-                Que cede fácilmente a la presión del tacto.
+                Persona que vende drogas tóxicas al por menor.
             </pregunta>
             <respuesta>
-                BLANDO
+                CAMELLO
             </respuesta>
         </cuestion>
         <cuestion>
             <pregunta>
-                Que cede fácilmente a la presión del tacto.
+                Dicho u ocurrencia aguda y graciosa.
             </pregunta>
             <respuesta>
-                BLANDO
+                CHISTE
             </respuesta>
         </cuestion>
         <cuestion>
             <pregunta>
-                Que cede fácilmente a la presión del tacto.
+                Actitud solidaria con el sufrimiento ajeno.
             </pregunta>
             <respuesta>
-                BLANDO
+                CARIDAD
             </respuesta>
         </cuestion>
 
     </C>
+    <D>
+        <cuestion>
+            <pregunta>
+                Suave, apacible, que recibe fácilmente la enseñanza.
+            </pregunta>
+            <respuesta>
+                DOCIL
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Decir algo con las pausas necesarias o convenientes para que otra persona lo vaya escribiendo.
+            </pregunta>
+            <respuesta>
+                DICTAR
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Cada uno de los cinco apéndices articulados en que terminan la mano y el pie del hombre y, en el mismo o menor número, de muchos animales.
+            </pregunta>
+            <respuesta>
+                DEDO
+            </respuesta>
+        </cuestion>
+    </D>
+    <E>
+        <cuestion>
+            <pregunta>
+                Dicho de una cosa: Que pertenece al espacio exterior de la Tierra o procede de él.
+            </pregunta>
+            <respuesta>
+                EXTRATERRESTRE
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Tristeza o pesar del bien ajeno.
+            </pregunta>
+            <respuesta>
+                ENVIDIA
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Utensilio compuesto por un haz de ramas flexibles o de filamentos de otro material sujetos normalmente al extremo de un palo o de un mango largo, que sirve para limpiar el suelo.
+            </pregunta>
+            <respuesta>
+                ESCOBA
+            </respuesta>
+        </cuestion>
+    </E>
+    <F>
+        <cuestion>
+            <pregunta>
+                Conjunto de creencias de una religión.
+            </pregunta>
+            <respuesta>
+                FE
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Que no requiere gran esfuerzo, habilidad o capacidad.
+            </pregunta>
+            <respuesta>
+                FACIL
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Conjunto de barcos mercantes de un país, de una compañía de navegación o de una línea marítima.
+            </pregunta>
+            <respuesta>
+                FLOTA
+            </respuesta>
+        </cuestion>
+    </F>
+    <G>
+        <cuestion>
+            <pregunta>
+                Pequeña porción de un líquido, con forma esferoidal.
+            </pregunta>
+            <respuesta>
+                GOTA
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Lucha armada entre dos o más naciones o entre bandos de una misma nación.
+            </pregunta>
+            <respuesta>
+                GUERRA
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                En el fútbol y otros deportes, entrada del balón en la portería.
+            </pregunta>
+            <respuesta>
+                GOL
+            </respuesta>
+        </cuestion>
+    </G>
+    <H>
+        <cuestion>
+            <pregunta>
+                Narración y exposición de los acontecimientos pasados y dignos de memoria, sean públicos o privados.
+            </pregunta>
+            <respuesta>
+                HISTORIA
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Aparato metálico cerrado, en cuyo interior se asan, cuecen, calientan o gratinan alimentos.
+            </pregunta>
+            <respuesta>
+                HORNO
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Parte superior y lateral del tronco del ser humano y de los cuadrumanos, de donde nace el brazo.
+            </pregunta>
+            <respuesta>
+                HOMBRO
+            </respuesta>
+        </cuestion>
+    </H>
+    <I>
+        <cuestion>
+            <pregunta>
+                Vivienda de forma semiesférica construida con bloques de hielo, en que, durante el invierno, habitan los esquimales y otros pueblos de análogas características.
+            </pregunta>
+            <respuesta>
+                IGLU
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Congregación de los fieles cristianos en virtud del bautismo.
+            </pregunta>
+            <respuesta>
+                IGLESIA
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Porción de tierra rodeada de agua por todas partes.
+            </pregunta>
+            <respuesta>
+                ISLA
+            </respuesta>
+        </cuestion>
+    </I>
+    <J>
+        <cuestion>
+            <pregunta>
+                Producto soluble en agua resultado de la combinación de un álcali con los ácidos del aceite u otro cuerpo graso, que se usa generalmente para lavar.
+            </pregunta>
+            <respuesta>
+                JABON
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Armazón, cerrada o no según los casos, hecha con barras o listones y destinada a encerrar generalmente animales.
+            </pregunta>
+            <respuesta>
+                JAULA
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Lenguaje especial y no formal que usan entre sí los individuos de ciertas profesiones y oficios.
+            </pregunta>
+            <respuesta>
+                JERGA
+            </respuesta>
+        </cuestion>
+    </J>
+    <L>
+        <cuestion>
+            <pregunta>
+                Instrumento, comúnmente metálico, que, introducido en una cerradura, permite activar el mecanismo que la abre y la cierra.
+            </pregunta>
+            <respuesta>
+                LLAVE
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Lugar formado artificiosamente por calles y encrucijadas, para confundir a quien se adentre en él, de modo que no pueda acertar con la salida.
+            </pregunta>
+            <respuesta>
+                LABERINTO
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Aparato eléctrico portátil, con pila y bombilla, para proyectar luz.
+            </pregunta>
+            <respuesta>
+                LINTERNA
+            </respuesta>
+        </cuestion>
+    </L>
+    <M>
+        <cuestion>
+            <pregunta>
+                Representación geográfica de la Tierra o parte de ella en una superficie plana.
+            </pregunta>
+            <respuesta>
+                MAPA
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Instrumento musical sudamericano, que consiste en una calabaza con granos de maíz o chinas en su interior, para acompañar el canto.
+            </pregunta>
+            <respuesta>
+                MARACA
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Conservar en crudo un alimento, especialmente un pescado, con adobo, para que se ablande y adquiera la sazón y el aroma deseados
+            </pregunta>
+            <respuesta>
+                MARINAR
+            </respuesta>
+        </cuestion>
+    </M>
+    <N>
+        <cuestion>
+            <pregunta>
+                Carta de la baraja.
+            </pregunta>
+            <respuesta>
+                NAIPE
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Agua helada que se desprende de las nubes en cristales sumamente pequeños, los cuales, agrupándose al caer, llegan al suelo en copos blancos.
+            </pregunta>
+            <respuesta>
+                NIEVE
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Parte del día comprendida entre la puesta del sol y el amanecer.
+            </pregunta>
+            <respuesta>
+                NOCHE
+            </respuesta>
+        </cuestion>
+    </N>
+    <Ñ>
+        <cuestion>
+            <pregunta>
+                Mamífero rumiante africano de la familia de los antílopes, de color pardo grisáceo, cuya cabeza recuerda la de un toro.
+            </pregunta>
+            <respuesta>
+                ÑU
+            </respuesta>
+        </cuestion>
+
+    </Ñ>
+    <O>
+        <cuestion>
+            <pregunta>
+                Local donde se hace, se ordena o trabaja algo.
+            </pregunta>
+            <respuesta>
+                OFICINA
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Perteneciente o relativo al trabajador.
+            </pregunta>
+            <respuesta>
+                OBRERO
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Trayectoria curva que describe un cuerpo en su movimiento alrededor de un centro.
+            </pregunta>
+            <respuesta>
+                ORBITA
+            </respuesta>
+        </cuestion>
+    </O>
+    <P>
+        <cuestion>
+            <pregunta>
+                Cuerpo encargado de velar por el mantenimiento del orden público y la seguridad de los ciudadanos, a las órdenes de las autoridades políticas.
+            </pregunta>
+            <respuesta>
+                POLICIA
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Cantidad periódica, temporal o vitalicia, que la seguridad social paga por razón de jubilación, viudedad, orfandad o incapacidad.
+            </pregunta>
+            <respuesta>
+                PENSION
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Persona que se dedica al arte de la pintura.
+            </pregunta>
+            <respuesta>
+                PINTOR
+            </respuesta>
+        </cuestion>
+    </P>
+    <Q>
+        <cuestion>
+            <pregunta>
+                Expresión de dolor, pena o sentimiento.
+            </pregunta>
+            <respuesta>
+                QUEJA
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                En la mitología clásica, monstruo imaginario que vomitaba llamas y tenía cabeza de león, vientre de cabra y cola de dragón.
+            </pregunta>
+            <respuesta>
+                QUIMERA
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Tomar algo separándolo y apartándolo de otras cosas, o del lugar o sitio en que estaba.
+            </pregunta>
+            <respuesta>
+                QUITAR
+            </respuesta>
+        </cuestion>
+    </Q>
+    <R>
+        <cuestion>
+            <pregunta>
+                Pequeño aparato manual conectado a una computadora u otro dispositivo electrónico, cuya función es mover el cursor en la pantalla para dar órdenes.
+            </pregunta>
+            <respuesta>
+                RATON
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Arreglar algo que está roto o estropeado.
+            </pregunta>
+            <respuesta>
+                REPARAR
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Adinerado, hacendado o acaudalado.
+            </pregunta>
+            <respuesta>
+                RICO
+            </respuesta>
+        </cuestion>
+    </R>
+    <S>
+        <cuestion>
+            <pregunta>
+                Aparato o mecanismo que emite un sonido audible a mucha distancia, y que se hace sonar como aviso.
+            </pregunta>
+            <respuesta>
+                SIRENA
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Despedir aire con violencia por la boca, alargando los labios un poco abiertos por su parte media.
+            </pregunta>
+            <respuesta>
+                SOPLAR
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Tener noticia o conocimiento de algo
+            </pregunta>
+            <respuesta>
+                SABER
+            </respuesta>
+        </cuestion>
+    </S>
+    <T>
+        <cuestion>
+            <pregunta>
+                Sacudida violenta de la corteza y manto terrestres, ocasionada por fuerzas que actúan en el interior de la Tierra.
+            </pregunta>
+            <respuesta>
+                TERREMOTO
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Perturbación atmosférica violenta acompañada de aparato eléctrico y viento fuerte, lluvia, nieve o granizo.
+            </pregunta>
+            <respuesta>
+                TORMENTA
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Construcción fortificada, más alta que ancha, utilizada para defender una ciudad o plaza.
+            </pregunta>
+            <respuesta>
+                TORRE
+            </respuesta>
+        </cuestion>
+    </T>
+    <U>
+        <cuestion>
+            <pregunta>
+                Perteneciente o relativo a la ciudad y, por ext., a otros núcleos de población.
+            </pregunta>
+            <respuesta>
+                URBANO
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Sonido cuya frecuencia de vibraciones es superior al límite perceptible por el oído humano.
+            </pregunta>
+            <respuesta>
+                ULTRASONIDO
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Que trae o produce provecho, comodidad, fruto o interés.
+            </pregunta>
+            <respuesta>
+                UTIL
+            </respuesta>
+        </cuestion>
+    </U>
+    <V>
+        <cuestion>
+            <pregunta>
+                Andar por varias partes sin determinación a sitio o lugar, o sin especial detención en ninguno.
+            </pregunta>
+            <respuesta>
+                VAGAR
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Madero largo y grueso que sirve, por lo regular, para formar los techos en los edificios y sostener y asegurar las fábricas.
+            </pregunta>
+            <respuesta>
+                VIGA
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Que se difunde con gran rapidez en las redes sociales a través de internet.
+            </pregunta>
+            <respuesta>
+                VIRAL
+            </respuesta>
+        </cuestion>
+    </V>
+    <X>
+        <cuestion>
+            <pregunta>
+                Fobia a lo extranjero o a los extranjeros.
+            </pregunta>
+            <respuesta>
+                XENOFOBIA
+            </respuesta>
+        </cuestion>
+    </X>
+    <Y>
+        <cuestion>
+            <pregunta>
+                Porción central del huevo en los vertebrados ovíparos.
+            </pregunta>
+            <respuesta>
+                YEMA
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Producto lácteo obtenido mediante reducción por evaporación y fermentación bacteriana de la leche.
+            </pregunta>
+            <respuesta>
+                YOGUR
+            </respuesta>
+        </cuestion>
+
+    </Y>
+    <Z>
+        <cuestion>
+            <pregunta>
+                Línea que en su desarrollo forma ángulos alternativos, entrantes y salientes
+            </pregunta>
+            <respuesta>
+                ZIGZAG
+            </respuesta>
+        </cuestion>
+        <cuestion>
+            <pregunta>
+                Líquido de las hierbas, flores, frutas u otras cosas semejantes, que se saca exprimiéndolas o majándolas.
+            </pregunta>
+            <respuesta>
+                ZUMO
+            </respuesta>
+        </cuestion>
+
+    </Z>
+
 </pasapalabra>
