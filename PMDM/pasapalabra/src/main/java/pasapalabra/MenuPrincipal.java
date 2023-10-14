@@ -21,8 +21,11 @@ public class MenuPrincipal extends JPanel implements MouseListener{
     private BufferedImage fotos[];
     private JLabel fotoclick;
     private JButton salir;
-    public MenuPrincipal(){
-
+    private JButton instrucciones;
+    private JButton jugar;
+    private FrameJuego fj;
+    public MenuPrincipal(FrameJuego frameJuego){
+        this.fj = frameJuego;
         this.setSize(1280,720);
         this.setLayout(null);
       // this.add(new Rosco()); //test
@@ -32,7 +35,7 @@ public class MenuPrincipal extends JPanel implements MouseListener{
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
+        //Que sean 100x100
         File avatares[] = new File("src/main/resources/avatares").listFiles();
 
         fotos = new BufferedImage[avatares.length];
@@ -51,7 +54,9 @@ public class MenuPrincipal extends JPanel implements MouseListener{
         fotoclick.addMouseListener(this);
         this.add(fotoclick);
 
-
+        jugar = crearBoton(30,350, "JUGAR");
+        instrucciones = crearBoton(30,430,"INSTRUCCIONES");
+        salir = crearBoton(30,510, "SALIR");
 
 
 
@@ -91,16 +96,36 @@ public class MenuPrincipal extends JPanel implements MouseListener{
 
         g2d.drawImage(logo, getWidth()-logo.getWidth()-100, 50, null);
         //g2d.drawImage(foto, getWidth()-logo.getWidth()-200, 200, null);
-
+        g2d.setPaint(Color.white);
+        g2d.setFont(new Font("Arial", Font.BOLD, 20));
+        g2d.drawString("¡ELIGE TU PERSONAJE!",550,350);
 
 
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        if(e.getSource()==fotoclick){
+        if(e.getSource()==fotoclick)
             new FrameAvatar(fotos);
+
+        if(e.getSource()==salir)
+            System.exit(0);
+
+        if(e.getSource()==instrucciones)
+            crearInstrucciones();
+
+        if(e.getSource()==jugar) {
+
+            Icon icon = fotoclick.getIcon();
+
+
+            BufferedImage bufferedImage = new BufferedImage(icon.getIconWidth(), icon.getIconHeight(), BufferedImage.TYPE_INT_ARGB);
+            icon.paintIcon(fotoclick, bufferedImage.getGraphics(), 0, 0);
+
+
+            fj.jugar(bufferedImage);
         }
+
     }
 
     @Override
@@ -130,10 +155,31 @@ public class MenuPrincipal extends JPanel implements MouseListener{
 
     private JButton crearBoton(int x, int y, String s){
         JButton jb = new JButton(s);
-        jb.setBounds(x,y,100,50);
-
+        jb.setBounds(x,y,175,50);
+        jb.setBorder(new LineBorder(Color.white, 2));
+        jb.setBackground(Color.decode(Rosco.Estado.AZUL.getHexValue()));
+        jb.setForeground(Color.white);
+        jb.setFocusable(false);
+        jb.setFont(new Font("Arial", Font.BOLD, 20));
+        jb.addMouseListener(this);
+        this.add(jb);
         return jb;
     };
+
+    private void crearInstrucciones(){
+        JDialog ins = new JDialog();
+        ins.setTitle("INSTRUCCIONES");
+        ins.setSize(400,100);
+        ins.setLocationRelativeTo(this);
+
+
+        JLabel texto = new JLabel("<html>¡Intenta adivinar la palabra!<br>Si no la sabes, puedes pulsar en el botón que dice PASAPALABRA." +
+                "<br>También puedes simplemente escribir PASAPALABRA</html>");
+        ins.add(texto);
+        ins.setModal(true);
+        ins.setVisible(true);
+
+    }
 
 
     private class FrameAvatar extends JDialog implements MouseListener{
@@ -176,7 +222,7 @@ public class MenuPrincipal extends JPanel implements MouseListener{
             confirmacion.setBounds(200,200,100,50);
             confirmacion.addMouseListener(this);
             confirmacion.setBorder(new LineBorder(Color.white, 3));
-            confirmacion.setBackground(Color.decode("#084CF6"));
+            confirmacion.setBackground(Color.decode(Rosco.Estado.AZUL.getHexValue()));
             confirmacion.setForeground(Color.white);
             this.add(confirmacion);
 
@@ -230,6 +276,9 @@ public class MenuPrincipal extends JPanel implements MouseListener{
 
         }
     }
+
+
+
 
 
 

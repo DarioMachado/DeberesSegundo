@@ -2,9 +2,11 @@ package pasapalabra;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
 
 public class FrameJuego extends JFrame {
-
+    private MenuPrincipal mp;
+    private PanelJuego juego;
     public FrameJuego(){
 
         this.setTitle("PASAPALABRA");
@@ -18,7 +20,7 @@ public class FrameJuego extends JFrame {
 
         centerFrame();
 
-        MenuPrincipal mp = new MenuPrincipal();
+        mp = new MenuPrincipal(this);
 
         this.add(mp);
 
@@ -37,6 +39,14 @@ public class FrameJuego extends JFrame {
         int y = (screenHeight - frameHeight) / 2;
 
         setLocation(x, y);
+    }
+
+    public void  jugar(BufferedImage icono){
+        this.remove(mp);
+        juego = new PanelJuego(icono);
+        mp = null;
+        this.add(juego);
+        repaint();
     }
 
 }
