@@ -173,8 +173,8 @@ public class MenuPrincipal extends JPanel implements MouseListener{
         ins.setLocationRelativeTo(this);
 
 
-        JLabel texto = new JLabel("<html>¡Intenta adivinar la palabra!<br>Si no la sabes, puedes pulsar en el botón que dice PASAPALABRA." +
-                "<br>También puedes simplemente escribir PASAPALABRA</html>");
+        JLabel texto = new JLabel("<html>¡Intenta adivinar la palabra!<br>Si no la sabes, puedes escribir PASALABARA "+
+                "<br>No tienes que preocuparte ni por tildes, ni por mayúsculas.</html>");
         ins.add(texto);
         ins.setModal(true);
         ins.setVisible(true);
