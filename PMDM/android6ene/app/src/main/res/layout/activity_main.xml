@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#3892E1"
+        android:layout_gravity="top"
+    />
+    <View
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#F11F26"
+        android:layout_gravity="end"
+        />
+    <View
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#C6C2CA"
+        android:layout_gravity="center_vertical"
+        />
+    <View
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#FFEB3B"
+        android:layout_gravity="end|center"
+        />
+    <View
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@color/purple_200"
+        android:layout_gravity="center"
+        />
+    <View
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#BBDA4C"
+        android:layout_gravity="bottom"
+        />
+    <View
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@color/purple_200"
+        android:layout_gravity="center"
+        />
+    <View
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#ED740A"
+        android:layout_gravity="end|bottom"
+        />
+    <View
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#464928"
+        android:layout_gravity="top|center"
+        />
+    <View
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#6888C1"
+        android:layout_gravity="bottom|center"
+        />
+
+
+
+</FrameLayout>

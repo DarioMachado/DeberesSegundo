@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PrimerConstraints">
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#E8CC19"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+    <View
+        android:id="@+id/view2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#214EED"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/view1"
+        app:layout_constraintRight_toLeftOf="@id/view3"
+        />
+    <View
+        android:id="@+id/view3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#33F410"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#F41051"
+        app:layout_constraintBottom_toTopOf="@id/view3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view9"
+        />
+    <View
+        android:id="@+id/view5"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#509736"
+        app:layout_constraintBottom_toTopOf="@id/view2"
+        app:layout_constraintRight_toLeftOf="@+id/view4"
+        app:layout_constraintLeft_toRightOf="@+id/view6"
+        app:layout_constraintTop_toBottomOf="@id/view8"
+       />
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#E14BF3"
+        app:layout_constraintBottom_toTopOf="@id/view1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view7"
+        />
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#64F34B"
+        app:layout_constraintBottom_toTopOf="@id/view6"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view12"
+
+        />
+    <View
+        android:id="@+id/view8"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#984646"
+        app:layout_constraintBottom_toTopOf="@id/view5"
+        app:layout_constraintRight_toLeftOf="@+id/view9"
+        app:layout_constraintLeft_toRightOf="@+id/view7"
+        app:layout_constraintTop_toBottomOf="@id/view11"
+       />
+
+    <View
+        android:id="@+id/view9"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#F3AA5C"
+        app:layout_constraintBottom_toTopOf="@id/view4"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view10" />
+
+    <View
+        android:id="@+id/view10"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#8A2844"
+        app:layout_constraintBottom_toTopOf="@id/view9"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="12" />
+
+    <View
+        android:id="@+id/view11"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#232087"
+        app:layout_constraintBottom_toTopOf="@id/view8"
+        app:layout_constraintRight_toLeftOf="@+id/view10"
+        app:layout_constraintLeft_toRightOf="@+id/view12"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.856" />
+
+    <View
+        android:id="@+id/view12"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#665168"
+        app:layout_constraintBottom_toTopOf="@id/view7"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.856"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
