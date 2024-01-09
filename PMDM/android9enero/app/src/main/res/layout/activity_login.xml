@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ejercicios.Login">
+
+    <View
+        android:id="@+id/logo"
+        android:layout_width="337dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="68dp"
+        android:background="#AAD860"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/nombre"
+        android:layout_width="337dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="96dp"
+        android:hint="Nombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <EditText
+        android:id="@+id/apellidos"
+        android:layout_width="337dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="28dp"
+        android:hint="Apellidos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombre" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="337dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="28dp"
+        android:hint="Email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/apellidos" />
+
+    <EditText
+        android:id="@+id/pass1"
+        android:layout_width="337dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="20dp"
+        android:hint="Contraseña"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email" />
+
+    <EditText
+        android:id="@+id/pass2"
+        android:layout_width="337dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="32dp"
+        android:hint="Repite la contraseña"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pass1" />
+
+    <Button
+        android:id="@+id/bLogin"
+        android:layout_width="337dp"
+        android:layout_height="59dp"
+        android:background="#58209C"
+        android:text="LOGIN"
+        android:textColor="@color/white"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pass2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
