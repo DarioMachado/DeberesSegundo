@@ -6,7 +6,6 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.context.internal.ThreadLocalSessionContext;
 import org.hibernate.engine.spi.SessionFactoryImplementor;
 
-
 public class Principal {
 
 	public static void main(String[] args) {

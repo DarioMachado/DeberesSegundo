@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
+/*
 @Entity
 @Table(name = "fabricante")
 public class Fabricante {
@@ -47,13 +47,13 @@ public class Fabricante {
 	}
 	
 	
-}
-
-
-/*
-@Entity
-public record Fabricante(@Id @GeneratedValue(strategy = GenerationType.IDENTITY) int id, String nombre) {
-	
 }*/
+
+
+
+@Entity
+@Table(name = "fabricante")
+public record Fabricante(@Id @GeneratedValue(strategy = GenerationType.IDENTITY) int id, String nombre) {
+}
 
 
