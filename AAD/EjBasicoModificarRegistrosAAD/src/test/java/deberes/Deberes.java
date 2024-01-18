@@ -56,10 +56,10 @@ class Deberes {
 	void verDatosModificados() {
 		
 		
-		assertDoesNotThrow(() -> Deberes.a());
+		assertDoesNotThrow(() -> Deberes.mitest());
 	}
 	
-	static void a() {
+	static void mitest() {
 		Session session = context.currentSession();
 		String selectHql = "FROM Fabricante WHERE id = 5";
 		Query<Fabricante> selectQuery = session.createQuery(selectHql, Fabricante.class);
@@ -68,6 +68,8 @@ class Deberes {
 		System.out.println("Tabla fabricantes después de modificar Gandalf");
 		for(Fabricante fabricante: fabricantes) System.out.println(fabricante);
 	}
+
+	
 	
 	
 	
