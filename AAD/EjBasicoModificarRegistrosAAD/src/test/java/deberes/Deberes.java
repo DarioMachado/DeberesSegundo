@@ -69,6 +69,16 @@ class Deberes {
 		for(Fabricante fabricante: fabricantes) System.out.println(fabricante);
 	}
 
+	@Test
+	@Order(4)
+	void consultaAntesDeBorrado(){
+		String selectHqlBeforeDelete = "FROM Fabricante WHERE id = 5";
+		Query<Fabricante> selectQueryBeforeDelete = session.createQuery(selectHql, Fabricante.class);
+		List<Fabricante> FabricantesBeforeDelete = selectQueryBeforeDelete.list();
+		System.out.println("Registros de la tabla fabricante antes de la eliminación:");
+		for(Fabricante fabricante: fabricantesBeforeDelete) System.out.println(fabricante);
+		
+	}
 	
 	
 	
