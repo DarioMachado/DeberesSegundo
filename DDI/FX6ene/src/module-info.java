@@ -11,4 +11,6 @@ module FX6ene {
 	opens ej6login to javafx.graphics, javafx.fxml;
 	opens ej7caja to javafx.graphics, javafx.fxml;
 	opens ej8flow to javafx.graphics, javafx.fxml;
+	opens ej9grid to javafx.graphics, javafx.fxml;
+	opens ejlibre10 to javafx.graphics, javafx.fxml;
 }
