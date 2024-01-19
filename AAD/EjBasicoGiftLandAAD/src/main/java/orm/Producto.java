@@ -26,6 +26,8 @@ public class Producto {
 	
 	@Column
 	private int unidades;
+	
+	public Producto() {}
 
 	public Producto( String nombre, String descripcion, double precio, String fabricante, int unidades) {
 		super();
