@@ -15,21 +15,61 @@
         android:layout_height="150dp"
         android:layout_marginEnd="16dp"
         app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        android:clickable="true"
+        android:foreground="@drawable/hola"
         app:layout_constraintEnd_toStartOf="@id/cardView2"
-        app:cardBackgroundColor="@color/purple_200"
+        app:cardBackgroundColor="#4EBF26"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+        
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/baseline_sentiment_satisfied_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+            
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
         android:layout_width="0dp"
         android:layout_height="150dp"
-        app:cardBackgroundColor="@color/teal_200"
+        app:cardBackgroundColor="#EC891C"
         app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        android:clickable="true"
+        android:foreground="@drawable/hola"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cardView1"
-        app:layout_constraintTop_toTopOf="parent"></androidx.cardview.widget.CardView>
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="ExtraText">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/baseline_cell_tower_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:tint="@color/dibujo1"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
 
 
 
@@ -39,10 +79,28 @@
         android:layout_height="150dp"
         android:layout_marginTop="16dp"
         app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        android:clickable="true"
+        android:foreground="@drawable/hola"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/cardView4"
         app:layout_constraintTop_toBottomOf="@id/cardView1"
-        app:cardBackgroundColor="@color/black">
+        app:cardBackgroundColor="#ECE700">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/baseline_5g_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:tint="@color/dibujo3"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -52,10 +110,135 @@
         android:layout_marginTop="16dp"
         android:layout_marginLeft="16dp"
         app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        android:clickable="true"
+        android:foreground="@drawable/hola"
         app:layout_constraintStart_toEndOf="@+id/cardView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cardView2"
-        app:cardBackgroundColor="@color/purple_500">
+        app:cardBackgroundColor="#EF15E4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INGRESOS AL MES"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+            <TextView
+                android:id="@+id/ingresos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/restar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_arrow_left_24"
+                android:backgroundTint="@color/black"
+                android:layout_marginEnd="16dp"
+                app:tint="@color/white"
+                />
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView5"
+        android:layout_width="378dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        app:cardBackgroundColor="#DA2222"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        android:clickable="true"
+        android:foreground="@drawable/hola"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/microplasticos"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:layout_margin="16dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView6"
+        android:layout_width="378dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="35dp"
+        android:clickable="true"
+        android:foreground="@drawable/hola"
+        app:cardBackgroundColor="#2759BD"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="EDAD"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvEdad"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="AÑOS"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <com.google.android.material.slider.RangeSlider
+                android:id="@+id/rangoEdad"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:stepSize="1"
+                android:valueFrom="1"
+                android:valueTo="100" />
+
+
+        </LinearLayout>
+
+
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
