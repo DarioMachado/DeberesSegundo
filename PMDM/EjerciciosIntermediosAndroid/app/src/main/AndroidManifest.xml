@@ -13,6 +13,9 @@
         android:theme="@style/Theme.EjerciciosIntermediosAndroid"
         tools:targetApi="31">
         <activity
+            android:name=".ResultadosCW"
+            android:exported="false" />
+        <activity
             android:name=".Ej2CardView"
             android:exported="false" />
         <activity
