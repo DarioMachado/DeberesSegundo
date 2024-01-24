@@ -35,7 +35,8 @@ CREATE TABLE clientes(
 CREATE TABLE pedidos(
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     id_cliente INT,
-    precio_total DECIMAL(10,2)
+    precio_total DECIMAL(10,2),
     fecha_pedido DATE NULL DEFAULT CURRENT_DATE,
-    direccion_envio VARCHAR(255)
+    direccion_envio VARCHAR(255),
+    FOREIGN KEY (id_cliente) REFERENCES clientes(id)
 );
