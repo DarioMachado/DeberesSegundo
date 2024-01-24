@@ -4,7 +4,7 @@ package entidades;
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
-
+@Entity
 @Table(name="libros")
 public class Libro {
 
@@ -20,7 +20,7 @@ public class Libro {
     @Column
     private String ISBN;
 
-    @Column
+    @Column(name = "release_year")
     private int releaseYear;
 
     @Column
@@ -32,14 +32,37 @@ public class Libro {
     @Column
     private int cantidad;
 
+
     @ManyToMany
     private Set<Autor> autores = new HashSet<>();
 
     @ManyToMany
+    @JoinTable(
+            name = "libros_categorias",
+            joinColumns = @JoinColumn(name = "libro_id"),
+            inverseJoinColumns = @JoinColumn(name = "categoria_id")
+    )
     private Set<Categoria> categorias = new HashSet<>();
+
+    public Set<Pedido> getPedidos() {
+        return pedidos;
+    }
+
+    public void setPedidos(Set<Pedido> pedidos) {
+        this.pedidos = pedidos;
+    }
 
     @ManyToMany(mappedBy = "libros")
     private Set<Pedido> pedidos = new HashSet<>();
+
+    public Libro(String nombre, String ISBN, int releaseYear, String idioma, double precio, int cantidad) {
+        this.nombre = nombre;
+        this.ISBN = ISBN;
+        this.releaseYear = releaseYear;
+        this.idioma = idioma;
+        this.precio = precio;
+        this.cantidad = cantidad;
+    }
 
     public Libro(){}
 

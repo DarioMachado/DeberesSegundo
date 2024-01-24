@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
+@Entity
 @Table(name="categorias")
 public class Categoria {
 
@@ -16,9 +17,13 @@ public class Categoria {
     @Column
     private String nombre;
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "categorias")
     private Set<Libro> libros = new HashSet<>();
 
+
+    public Categoria(String nombre) {
+        this.nombre = nombre;
+    }
 
     public Categoria(){}
 
@@ -44,5 +49,13 @@ public class Categoria {
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 '}';
+    }
+
+    public Set<Libro> getLibros() {
+        return libros;
+    }
+
+    public void setLibros(Set<Libro> libros) {
+        this.libros = libros;
     }
 }

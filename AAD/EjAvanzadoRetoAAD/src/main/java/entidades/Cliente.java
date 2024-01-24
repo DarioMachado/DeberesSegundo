@@ -4,7 +4,7 @@ package entidades;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-
+@Entity
 @Table(name="clientes")
 public class Cliente {
 
@@ -28,6 +28,12 @@ public class Cliente {
     @OneToMany(mappedBy = "cliente")
     private List<Pedido> pedidos = new ArrayList<>();
 
+    public Cliente(String nombre, String apellidos, String telefono, String email) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.telefono = telefono;
+        this.email = email;
+    }
 
     public Cliente(){}
 

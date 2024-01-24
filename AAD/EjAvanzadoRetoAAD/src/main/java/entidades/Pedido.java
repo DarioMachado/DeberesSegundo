@@ -5,7 +5,7 @@ import javax.persistence.*;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
-
+@Entity
 @Table(name = "pedidos")
 public class Pedido {
 
@@ -15,21 +15,28 @@ public class Pedido {
     private int id;
 
     @ManyToOne
-    @JoinColumn(name = "cliente_id")
+    @JoinColumn(name = "id_cliente")
     private Cliente cliente;
 
-    @Column
+    @Column(name="precio_total")
     private double precioTotal;
 
-    @Column
+    @Column(name="fecha_pedido")
     private Date fechaPedido;
 
-    @Column
+    @Column(name="direccion_envio")
     private String direccionEnvio;
 
 
     @ManyToMany
     private Set<Libro> libros = new HashSet<>();
+
+    public Pedido(Cliente cliente, double precioTotal, Date fechaPedido, String direccionEnvio) {
+        this.cliente = cliente;
+        this.precioTotal = precioTotal;
+        this.fechaPedido = fechaPedido;
+        this.direccionEnvio = direccionEnvio;
+    }
 
     public Pedido(){}
 
@@ -85,5 +92,13 @@ public class Pedido {
 
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
+    }
+
+    public Set<Libro> getLibros() {
+        return libros;
+    }
+
+    public void setLibros(Set<Libro> libros) {
+        this.libros = libros;
     }
 }

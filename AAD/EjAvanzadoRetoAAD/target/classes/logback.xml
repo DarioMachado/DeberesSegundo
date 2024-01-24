@@ -13,5 +13,5 @@
 
     <logger name="org.hibernate" level="WARN"/>
 	<logger name="org.hibernate.SQL" level="INFO"/>
-   <logger name="org.hibernate.orm.connections.pooling" level="ERROR"/>
+   <logger name="org.hibernate.entidades.connections.pooling" level="ERROR"/>
 </configuration>

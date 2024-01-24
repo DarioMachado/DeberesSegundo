@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
-
+@Entity
 @Table(name= "autores")
 public class Autor {
 
@@ -18,14 +18,20 @@ public class Autor {
     @Column
     private String nombre;
 
-    @Column
+    @Column(name = "pais_origen")
     private String paisOrigen;
 
-    @Column
+    @Column(name = "fecha_nacimiento")
     private Date fechaNacimiento;
 
     @ManyToMany(mappedBy = "autores")
     private Set<Libro> libros = new HashSet<>();
+
+    public Autor(String nombre, String paisOrigen, Date fechaNacimiento) {
+        this.nombre = nombre;
+        this.paisOrigen = paisOrigen;
+        this.fechaNacimiento = fechaNacimiento;
+    }
 
     public Autor(){};
 
