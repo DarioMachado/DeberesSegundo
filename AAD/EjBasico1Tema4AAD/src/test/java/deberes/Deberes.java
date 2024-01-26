@@ -135,7 +135,37 @@ public class Deberes {
 		PreparedStatement smt = con.prepareStatement(consulta);
 		
 		//TODO SEGUIR Y ADEMÁS HACER LO DE ELIMINAR
+		ResultSet rs = smt.executeQuery();
 		
+		while(rs.next()) {
+			System.out.println("ID: "+rs.getInt("id")+""
+					+ "\nNombre: "+rs.getString("nombre")+""
+							+ "\nPaís: "+rs.getString("pais"));
+		}
+		rs.close();
+		cerrar(smt,con);
+	}
+	
+	@Test
+	@Order(5)
+	void eliminarRegistros() throws SQLException {
+		Connection con = conectarse();
+		
+		String eliminar = "DELETE FROM empresa WHERE id=?";
+		
+		PreparedStatement smt = con.prepareStatement(eliminar);
+		
+		smt.setInt(1, 5);
+		
+		int filasAfectadas = smt.executeUpdate();
+		
+		if(filasAfectadas > 0) 
+			System.out.println("Registro con id 5 eliminado");
+		else
+			System.out.println("No se encontró el registro");
+		
+		
+		cerrar(smt, con);
 		
 		
 	}
