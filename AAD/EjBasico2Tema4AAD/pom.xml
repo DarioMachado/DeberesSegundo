@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>EjBasico2Tema4AAD</groupId>
+  <artifactId>EjBasico2Tema4AAD</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <dependencies>
+	  <dependency>
+  <groupId>com.oracle.database.jdbc</groupId>
+  <artifactId>ojdbc8</artifactId>
+  <version>19.3.0.0</version>
+</dependency>
+
+<dependency>
+<groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>1.7.36</version>
+    </dependency>
+    <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>1.2.6</version>
+    </dependency>
+    <dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-api</artifactId>
+    <version>5.10.1</version>
+    <scope>test</scope>
+</dependency>
+
+
+  </dependencies>
+</project>
