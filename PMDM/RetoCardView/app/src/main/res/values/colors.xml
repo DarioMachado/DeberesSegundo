@@ -11,4 +11,5 @@
     <color name="fondo">#0e0b20</color>
     <color name="botones">#6200ee</color>
     <color name="seleccionada">#111328</color>
+    <color name="texto">#80818d</color>
 </resources>

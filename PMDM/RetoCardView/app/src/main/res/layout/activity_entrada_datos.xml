@@ -16,6 +16,8 @@
         android:layout_marginTop="56dp"
         android:backgroundTint="@color/cartas"
         app:layout_constraintEnd_toEndOf="parent"
+        android:clickable="true"
+        android:onClick="elegirSexo"
         app:layout_constraintHorizontal_bias="0.058"
         app:cardCornerRadius="20dp"
         app:layout_constraintStart_toEndOf="@+id/hombre"
@@ -45,7 +47,7 @@
                 android:layout_marginBottom="16dp"
                 android:text="TextView"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/texto"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
@@ -63,6 +65,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="56dp"
         app:cardCornerRadius="20dp"
+        android:clickable="true"
+        android:onClick="elegirSexo"
         android:backgroundTint="@color/cartas"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -70,6 +74,7 @@
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
+
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -92,7 +97,7 @@
                 android:layout_marginBottom="16dp"
                 android:text="TextView"
                 android:textAlignment="center"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/texto"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
@@ -111,7 +116,64 @@
         android:backgroundTint="@color/cartas"
         app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView9" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView9">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="EDAD"
+                android:textColor="@color/texto"
+                android:textAlignment="center"
+                android:gravity="center"
+                />
+            <TextView
+                android:id="@+id/edad"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:text="30"
+                android:textColor="@color/white"
+                android:textSize="35sp"
+                android:textAlignment="center"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:gravity="center">
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/menosEdad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_remove_24"
+                    app:backgroundTint="@color/botones"
+                    app:tint="@color/white"
+                    android:onClick="cambiarEdad"
+                    app:fabCustomSize="40dp"
+                    android:layout_marginEnd="4dp"
+                    />
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/masEdad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_add_24"
+                    app:backgroundTint="@color/botones"
+                    app:tint="@color/white"
+                    app:fabCustomSize="40dp"
+                    android:onClick="cambiarEdad"
+                    android:layout_marginStart="4dp"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView8"
@@ -124,7 +186,64 @@
         app:layout_constraintEnd_toStartOf="@+id/cardView7"
         app:layout_constraintHorizontal_bias="0.181"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView9" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView9">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="PESO"
+                android:textColor="@color/texto"
+                android:textAlignment="center"
+                android:gravity="center"
+                />
+            <TextView
+                android:id="@+id/peso"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:text="70"
+                android:textColor="@color/white"
+                android:textSize="35sp"
+                android:textAlignment="center"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:gravity="center">
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/menosPeso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_remove_24"
+                    app:backgroundTint="@color/botones"
+                    app:tint="@color/white"
+                    app:fabCustomSize="40dp"
+                    android:onClick="cambiarPeso"
+                    android:layout_marginEnd="4dp"
+                    /> <!-- por qué para centrarlo hay que poner fabcustomsize - 40dp???????????-->
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/masPeso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_add_24"
+                    app:backgroundTint="@color/botones"
+                    app:tint="@color/white"
+                    android:onClick="cambiarPeso"
+                    app:fabCustomSize="40dp"
+                    android:layout_marginStart="4dp"
+                    />
+                
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
 
     <Button
         android:id="@+id/button"
@@ -134,20 +253,56 @@
         android:backgroundTint="@color/botones"
         android:text="CALCULAR"
         app:cardCornerRadius="20dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView8"
+        app:layout_constraintVertical_bias="0.812" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView9"
         android:layout_width="371dp"
-        android:layout_height="110dp"
+        android:layout_height="120dp"
         app:cardCornerRadius="20dp"
         android:backgroundTint="@color/cartas"
         android:layout_marginTop="52dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hombre" />
+        app:layout_constraintTop_toBottomOf="@+id/hombre">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="ALTURA"
+                android:textColor="@color/texto"
+                android:textAlignment="center"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/altura"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:text="120 cm"
+                android:textColor="@color/white"
+                android:textSize="35sp"
+                android:textAlignment="center"/>
+            <com.google.android.material.slider.RangeSlider
+                android:id="@+id/rangoAltura"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:stepSize="1"
+                android:valueFrom="120"
+                android:valueTo="200"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
