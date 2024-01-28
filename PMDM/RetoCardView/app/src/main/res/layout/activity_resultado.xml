@@ -21,55 +21,68 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="378dp"
-        android:layout_height="491dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="345dp"
+        android:layout_height="467dp"
         android:backgroundTint="@color/cartas"
         app:cardCornerRadius="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <TextView
                 android:id="@+id/clasificacion"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:textColor="#F80000"
+                android:gravity="center"
                 android:text="aaa"
                 android:textAlignment="center"
-                android:gravity="center"
-                android:textSize="30sp"
-                />
+                android:textColor="#F80000"
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/IMC"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:textColor="@color/white"
+                android:gravity="center"
                 android:text="aaa"
                 android:textAlignment="center"
-                android:gravity="center"
-                android:textSize="50sp"/>
+                android:textColor="@color/white"
+                android:textSize="50sp" />
 
             <TextView
                 android:id="@+id/explicacion"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:textColor="@color/white"
+                android:gravity="center"
                 android:text="blablabla"
                 android:textAlignment="center"
-                android:gravity="center"/>
+                android:textColor="@color/white"
+                android:textSize="25sp" />
 
         </LinearLayout>
 
 
     </androidx.cardview.widget.CardView>
-    
-    
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="282dp"
+        android:layout_height="75dp"
+        android:text="RE-CALCULAR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        android:onClick="recalcular"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

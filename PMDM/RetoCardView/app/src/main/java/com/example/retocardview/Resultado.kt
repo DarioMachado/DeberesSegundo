@@ -1,7 +1,9 @@
 package com.example.retocardview
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
 import org.w3c.dom.Text
 
@@ -30,6 +32,12 @@ class Resultado : AppCompatActivity() {
                 tvExplicacion.text = "Estás por encima de tu peso ideal"
             if(IMC >=30F)
                 tvExplicacion.text = "Estás muy por encima de tu peso ideal"
+        }
+
+        fun recalcular(view: View){
+            val intent = Intent(this, EntradaDatos::class.java)
+            startActivity(intent)
+
         }
 
     }

@@ -3,6 +3,8 @@ package com.example.retocardview
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.MediaStore.Images.ImageColumns
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
@@ -87,10 +89,12 @@ class EntradaDatos : AppCompatActivity() {
     }
 
 
-    fun calcular(){
+    fun calcular(view: View){
         var clasificacion: String = ""
 
-        var IMC: Float = peso / ((altura*altura)/100f)
+        var IMC: Float = (peso / ((altura*altura) /100F)) * 100
+        IMC = String.format("%.2f", IMC).toFloat() //Esto es para redondearlo a 2 decimales
+        Log.d("ASS", "$IMC")
 
         //Esto se llama cascada de ifs, seguirá haciendo ifs hasta que deje de hacerlos
         if(IMC < 18.5f)
