@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.ColorPicker?>
@@ -31,10 +32,11 @@
         </rowConstraints>
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Fecha de nacimiento" GridPane.halignment="CENTER" />
-            <DatePicker GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <DatePicker fx:id="fecha" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
             <Hyperlink text="http://www.google.com" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Color de la aplicación" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
-            <ColorPicker GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <ColorPicker fx:id="color" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Button alignment="TOP_CENTER" contentDisplay="TOP" mnemonicParsing="false" text="Aceptar" onAction="#mostrarResultado" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
          </children>
       </GridPane>
    </bottom>
@@ -56,15 +58,15 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <CheckBox mnemonicParsing="false" text="Televisión" />
-            <CheckBox mnemonicParsing="false" text="Telefonía" GridPane.columnIndex="1" />
-            <CheckBox mnemonicParsing="false" text="Wifi" GridPane.columnIndex="2" />
+            <CheckBox fx:id="tv" mnemonicParsing="false" text="Televisión" />
+            <CheckBox fx:id="tlf" mnemonicParsing="false" text="Telefonía" GridPane.columnIndex="1" />
+            <CheckBox fx:id="wifi" mnemonicParsing="false" text="Wifi" GridPane.columnIndex="2" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Forma de pago" GridPane.rowIndex="1" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Otros servicios" GridPane.columnIndex="2" GridPane.rowIndex="1" />
             <ComboBox fx:id="cbServicios" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             <RadioButton fx:id="rbParticular" mnemonicParsing="false" text="Particular" GridPane.rowIndex="4" />
             <RadioButton fx:id="rbEmpresa" mnemonicParsing="false" text="Empresa" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <ChoiceBox prefWidth="150.0" GridPane.rowIndex="2" fx:id="chbPagos" />
+            <ChoiceBox fx:id="chbPagos" prefWidth="150.0" GridPane.rowIndex="2" />
          </children>
       </GridPane>
    </center>
