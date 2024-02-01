@@ -11,7 +11,7 @@
         <property name="show_sql">true</property>
         <property name="current_session_context_class">thread</property>
 
-        <mapping class="modelo.Empresa" /> <!-- Ajusta el nombre de la clase según tu paquete -->
+        <mapping class="oracle.Empresa" /> <!-- Ajusta el nombre de la clase según tu paquete -->
 
     </session-factory>
 </hibernate-configuration>
