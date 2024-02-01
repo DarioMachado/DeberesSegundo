@@ -8,4 +8,5 @@ module ControlesFX {
 	opens ej2iva to javafx.graphics, javafx.fxml;
 	opens ej3formulario to javafx.graphics, javafx.fxml;
 	opens ej5otroformulario to javafx.graphics, javafx.fxml;
+	opens ej6menu to javafx.graphics, javafx.fxml;
 }
