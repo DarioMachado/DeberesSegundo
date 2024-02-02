@@ -11,7 +11,6 @@ public class Empresa {
 
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column
 	private int id;
 	

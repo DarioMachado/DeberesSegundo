@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.PersistenceContext;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 
 public class EmpresaDAOHibernate implements EmpresaDAO{
@@ -17,26 +18,36 @@ public class EmpresaDAOHibernate implements EmpresaDAO{
 
 	@Override
 	public void agregarEmpresa(Empresa empresa) {
-		// TODO Auto-generated method stub
+		session.save(empresa);
+		
+		session.beginTransaction().commit();
 		
 	}
 
 	@Override
 	public void actualizarEmpresa(Empresa empresa) {
-		session.merge(empresa);
+		session.beginTransaction();
+		
+		Query<?> query = session.createQuery("UPDATE Empresa SET nombre = '"+empresa.getNombre()+"', pais = '"+empresa.getPais()+"' WHERE nombre = '+"+empresa.getId()+"'");
+		
+		query.executeUpdate();
+		
+		session.getTransaction().commit();
 		
 	}
 
 	@Override
 	public void eliminarEmpresa(int id) {
-		// TODO Auto-generated method stub
+		Empresa empresa = session.find(Empresa.class, id);
+		if(empresa!=null) {
+			session.remove(empresa);
+		}
 		
 	}
 
 	@Override
 	public Empresa obtenerEmpresa(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return (Empresa) (session.find(Empresa.class, id));
 	}
 
 	@Override

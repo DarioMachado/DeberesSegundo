@@ -30,8 +30,14 @@ public class Main {
 			
 			dao.actualizarEmpresa(new Empresa(1,"AAAAAA", "EEEEEEEEE"));
 			//Y aquí acaba el ej 1
-			session.close();
 			
+			//La opción de modificar ya estaba pero bueno
+			dao.agregarEmpresa(new Empresa(6,"Juan", "España"));
+			System.out.println(dao.obtenerEmpresa(6));
+			dao.actualizarEmpresa(new Empresa(6, "Pedro", "España"));
+			System.out.println(dao.obtenerEmpresa(6));
+			dao.eliminarEmpresa(6);
+			System.out.println(dao.obtenerEmpresa(6));
 			
 	}
 	
