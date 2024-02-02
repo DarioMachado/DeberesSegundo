@@ -39,9 +39,11 @@ public class EmpresaDAOHibernate implements EmpresaDAO{
 	@Override
 	public void eliminarEmpresa(int id) {
 		Empresa empresa = session.find(Empresa.class, id);
+		session.beginTransaction();
 		if(empresa!=null) {
 			session.remove(empresa);
 		}
+		session.getTransaction().commit();
 		
 	}
 
