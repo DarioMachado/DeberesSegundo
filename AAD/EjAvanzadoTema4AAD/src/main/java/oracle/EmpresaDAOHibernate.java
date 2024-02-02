@@ -28,7 +28,7 @@ public class EmpresaDAOHibernate implements EmpresaDAO{
 	public void actualizarEmpresa(Empresa empresa) {
 		session.beginTransaction();
 		
-		Query<?> query = session.createQuery("UPDATE Empresa SET nombre = '"+empresa.getNombre()+"', pais = '"+empresa.getPais()+"' WHERE nombre = '+"+empresa.getId()+"'");
+		Query<?> query = session.createQuery("UPDATE Empresa SET nombre = '"+empresa.getNombre()+"', pais = '"+empresa.getPais()+"' WHERE id = '+"+empresa.getId()+"'");
 		
 		query.executeUpdate();
 		
