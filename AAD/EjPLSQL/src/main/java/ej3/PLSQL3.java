@@ -21,6 +21,8 @@ public class PLSQL3 {
                     'Apellido: ' || alu.apellido || CHR(10) ||
                     'ID Alumno desde la función: ' || alu.get_id_alumno();
     END;
+    
+    
 		 */
 
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
