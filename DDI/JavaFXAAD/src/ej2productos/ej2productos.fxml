@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" 
+fx:controller="ej2productos.Ej2Controller" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView prefHeight="264.0" prefWidth="600.0" fx:id="tabla">
+        <columns>
+          <TableColumn prefWidth="75.0" text="ID" fx:id="id" />
+          <TableColumn prefWidth="130.0" text="Nombre" fx:id="nombre" />
+            <TableColumn prefWidth="170.0" text="precio" fx:id="precio" />
+            <TableColumn prefWidth="67.0" text="codigo" fx:id="codigo" />
+        </columns>
+      </TableView>
+      <Pane prefHeight="129.0" prefWidth="600.0" />
+   </children>
+</VBox>
