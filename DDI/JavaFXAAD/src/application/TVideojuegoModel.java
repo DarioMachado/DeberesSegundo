@@ -10,7 +10,7 @@ import java.util.List;
 
 public class TVideojuegoModel {
 	
-	Connection con = null;
+	private Connection con = null;
 	
 	public TVideojuegoModel(String url, String user, String pass) throws SQLException {
 		con = DriverManager.getConnection("jdbc:mysql://"+url, user, pass);
