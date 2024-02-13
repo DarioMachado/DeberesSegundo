@@ -1,6 +1,8 @@
 package deberes;
 
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
@@ -19,13 +21,21 @@ public class Cliente {
 		try {
 			Socket server = new Socket(host, puerto);
 			
-			OutputStream os = server.getOutputStream();
+			ObjectOutputStream oos = new ObjectOutputStream(server.getOutputStream());
+			//Primero el cliente envía el mensaje
+			oos.writeObject(enviar);			
 			
-			//TODO seguir
+			//Quinto, el cliente recibe la respuesta
+			ObjectInputStream ois = new ObjectInputStream(server.getInputStream());
+			
+			System.out.println(ois.readObject());
 			
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
