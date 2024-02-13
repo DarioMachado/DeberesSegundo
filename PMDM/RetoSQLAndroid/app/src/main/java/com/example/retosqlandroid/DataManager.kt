@@ -66,6 +66,9 @@ class DataManager(context: Context) {
         return db.delete(DatabaseHelper.TABLE_NAME, "nombre=?", arrayOf(nombre)) > 0
     }
 
-    fun actualizar()
+    fun actualizar(nombre: String, datos: ContentValues): Boolean{
+        val db = dbHelper.writableDatabase
+        return db.update(DatabaseHelper.TABLE_NAME, datos, "nombre=?", arrayOf(nombre)) > 0
+    }
 
 }

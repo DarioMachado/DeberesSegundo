@@ -1,5 +1,7 @@
 package com.example.retosqlandroid
 
+import android.content.ContentValues
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Adapter
@@ -9,9 +11,11 @@ import android.widget.EditText
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 
 class MainActivity : AppCompatActivity() {
     private lateinit var dataManager: DataManager
+    @RequiresApi(Build.VERSION_CODES.R)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -34,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         val btnMostrar = findViewById<Button>(R.id.btnMostrar)
         val tvMuestraDatos = findViewById<TextView>(R.id.tvMuestraDatos)
         val btnBorrar = findViewById<Button>(R.id.btnBorrar)
+        val btnActualizar = findViewById<Button>(R.id.btnActualizar)
 
         btnAgregar.setOnClickListener {
             val nombre = etNombre.text.toString()
@@ -67,6 +72,49 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this,"Registro borrado: $nombre",Toast.LENGTH_SHORT).show()
             else
                 Toast.makeText(this,"No se encontró el registo: $nombre",Toast.LENGTH_SHORT).show()
+
+        }
+
+        btnActualizar.setOnClickListener{
+            val nombre = etNombre.text.toString()
+            val pais = etPais.text.toString()
+            val habitat = etHabitat.text.toString()
+            val descripcion = etDescripcion.text.toString()
+            val tipo = etTipo.text.toString()
+            val popularidad = etPopularidad.text.toString()
+            val real = etPopularidad.text.toString()
+
+            val values = ContentValues().apply{
+
+                if(pais.isNotBlank())
+                put(DatabaseHelper.COLUMN_PAIS, pais)
+                if(habitat.isNotBlank())
+                put(DatabaseHelper.COLUMN_HABITAT, habitat)
+                if (descripcion.isNotBlank())
+                put(DatabaseHelper.COLUMN_DESCRIPCION, descripcion)
+                if(tipo.isNotBlank())
+                put(DatabaseHelper.COLUMN_TIPO, tipo)
+                if(popularidad.isNotBlank())
+                put(DatabaseHelper.COLUMN_POPULARIDAD, popularidad)
+                if(real.isNotBlank())
+                put(DatabaseHelper.COLUMN_REAL, real)
+            }
+           if(values.isEmpty)
+               return@setOnClickListener
+
+            if(dataManager.actualizar(nombre, values))
+                Toast.makeText(this,"Registro actualizado: $nombre",Toast.LENGTH_SHORT).show()
+            else
+                Toast.makeText(this,"No se encontró el registo: $nombre",Toast.LENGTH_SHORT).show()
+
+
+            etNombre.text.clear()
+            etPais.text.clear()
+            etHabitat.text.clear()
+            etDescripcion.text.clear()
+            etTipo.text.clear()
+            etPopularidad.text.clear()
+            etReal.text.clear()
 
         }
     }

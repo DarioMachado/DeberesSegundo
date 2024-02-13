@@ -19,7 +19,7 @@
         android:id="@+id/etHabitat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="HÁBITAT" />
+        android:hint="Hábitat" />
     <EditText
         android:id="@+id/etDescricpion"
         android:layout_width="match_parent"
@@ -56,6 +56,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Borrar" />
+    <Button
+        android:id="@+id/btnActualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actualizar" />
     <TextView
         android:id="@+id/tvMuestraDatos"
         android:layout_width="match_parent"
@@ -63,6 +68,7 @@
         android:layout_marginTop="16dp"
         android:textColor="@android:color/black"
         android:textSize="16sp" />
+
 
 
 </LinearLayout>
