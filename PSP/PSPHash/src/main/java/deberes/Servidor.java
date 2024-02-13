@@ -31,8 +31,6 @@ public class Servidor {
 			
 			String recibido = (String) ois.readObject();
 			
-			System.out.println(recibido);
-			System.out.println(mensaje);
 			//Tercero compara la string recibida con el mensaje que quiere recibir
 			
 			ObjectOutputStream oos = new ObjectOutputStream(cliente.getOutputStream());
