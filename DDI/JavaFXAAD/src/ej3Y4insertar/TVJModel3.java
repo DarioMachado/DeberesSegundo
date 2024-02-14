@@ -18,9 +18,9 @@ public class TVJModel3 extends TVideojuegoModel{
 		
 	}
 	
-	String columnaAnio = "año"; //En mi base de datos tengo puesto año, dejo esto string para ver que todo funciona. Si se me ha olvidado
+	String columnaAnio = "anio"; //En mi base de datos tengo puesto año, dejo esto string para ver que todo funciona. Si se me ha olvidado
 							//cambiarlo antes de entregarlo, puede cambiarlo aquí
-	String columnaCompania = "compañia"; //lo mismo...
+	String columnaCompania = "compania"; //lo mismo...
 	public void addVideojuego(TVideojuego jueguito) throws SQLException{
 		String query = "INSERT INTO tvideojuegos(nombre, "+columnaAnio+", "+columnaCompania+", precio, sinopsis, plataforma) VALUES (?,?,?,?,?,?)";
 		
