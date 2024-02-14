@@ -4,6 +4,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -19,9 +20,9 @@ public class AlumnoModel {
 		
 		Statement smt = con.createStatement();
 		ResultSet rs = smt.executeQuery("SELECT * FROM alumno");
-		//TODO continuar....
-		
-		return null;
+		List<Alumno> alumnos = new ArrayList<Alumno>();
+		while(rs.next()) alumnos.add(new Alumno(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getDate(5), rs.getString(6).equalsIgnoreCase("sí"), rs.getString(7)));
+		return alumnos;
 	}
 	
 	
