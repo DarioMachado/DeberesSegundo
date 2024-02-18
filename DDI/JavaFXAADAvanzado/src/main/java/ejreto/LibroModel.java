@@ -32,4 +32,18 @@ public class LibroModel {
 			}
 		}
 	}
+
+
+	public void borrarLibro(Libro libro){
+		Transaction transaction = null;
+		try {
+			transaction = session.beginTransaction();
+			session.delete(libro);
+			transaction.commit();
+		}catch(Exception e) {
+			if (transaction != null) {
+				transaction.rollback();
+			}
+		}
+	}
 }

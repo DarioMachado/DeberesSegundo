@@ -1,95 +1,62 @@
 package ejreto;
 
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
-
 import javax.persistence.*;
 
 @Entity
-@Table
+@Table(name="libros")
 public class Libro {
 
 
-
-	private StringProperty titulo = new SimpleStringProperty();
-
-	private StringProperty editorial = new SimpleStringProperty();
-
-	private StringProperty autore = new SimpleStringProperty();
-
-	private IntegerProperty paginas = new SimpleIntegerProperty();
-
-	@Column(name="titulo")
-	private String tituloData;
-	@Column(name="editorial")
-	private String editorialData;
-	@Column(name="autore")
-	private String autoreData;
-	@Column(name = "paginas")
-	private int paginasData;
+	@Id
+	@Column
+	private String titulo;
+	@Column
+	private String editorial;
+	@Column
+	private String autore;
+	@Column
+	private int paginas;
 
 	public Libro() {
 	}
 
 	public Libro(String titulo, String editorial, String autore, int paginas) {
-		this.titulo.set(titulo);
-		this.tituloData=titulo;
-		this.editorial.set(editorial);
-		this.editorialData = editorial;
-		this.autore.set(autore);
-		this.autoreData = autore;
-		this.paginas.set(paginas);
-		this.paginasData = paginas;
-	}
 
-	public void setTitulo(String titulo) {
-		this.titulo.set(titulo);
-		this.tituloData = titulo;
-	}
-
-	public void setAutore(String autore) {
-		this.autore.set(autore);
-		this.autoreData = autore;
-	}
-
-	public void setEditorial(String editorial) {
-		this.editorial.set(editorial);
-		this.editorialData = editorial;
-	}
-
-	public void setPaginas(int paginas) {
-		this.paginas.set(paginas);
-		this.paginasData = paginasData;
+		this.titulo =titulo;
+		this.editorial = editorial;
+		this.autore = autore;
+		this.paginas = paginas;
 	}
 
 	public String getTitulo() {
-		return titulo.get();
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
 	}
 
 	public String getEditorial() {
-		return editorial.get();
+		return editorial;
+	}
+
+	public void setEditorial(String editorial) {
+		this.editorial = editorial;
 	}
 
 	public String getAutore() {
-		return autore.get();
+		return autore;
+	}
+
+	public void setAutore(String autore) {
+		this.autore = autore;
 	}
 
 	public int getPaginas() {
-		return paginas.get();
+		return paginas;
 	}
 
-	public StringProperty tituloProperty(){
-		return titulo;
-	}
-	public StringProperty editorialProperty(){
-		return editorial;
-	}
-	public StringProperty autoreProperty(){
-		return autore;
-	}
-	public IntegerProperty paginasProperty(){
-		return paginas;
+	public void setPaginas(int paginas) {
+		this.paginas = paginas;
 	}
 }
