@@ -35,8 +35,27 @@ public class ConectarXML {
 			
 			if(res == null) 
 				System.out.println("Base de datos no encontrada.");
-			else
+			else{
+				//ESto muestra todo el contenido
 				System.out.println(res.getContent());
+
+				
+				// Esto muestra lo soleccionado con xquery..
+				XPathQueryService xpathService = (XPathQueryService) col.getService("XPathQueryService", "1.0");
+				xpathService.setProperty("indent", "yes");
+				String xquery = "/series/serie[inicio_emision >= 2000]";
+				ResourceSet result = xpathService.query(xquery);
+
+				// Imprime los resultados de la consulta
+				ResourceIterator i = result.getIterator();
+				while (i.hasMoreResources()) {
+					Resource r = i.nextResource();
+					System.out.println(r.getContent());
+				
+			}
+
+
+			}
 			
 		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | IllegalArgumentException | SecurityException | XMLDBException e) {
 			e.printStackTrace();
