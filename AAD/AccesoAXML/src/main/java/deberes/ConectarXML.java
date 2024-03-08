@@ -53,7 +53,7 @@ public class ConectarXML {
 					System.out.println(r.getContent());
 				
 			}
-
+			//for $serie in /series/serie where $serie/temporadas > 5 return $serie/titulo
 
 			}
 			
